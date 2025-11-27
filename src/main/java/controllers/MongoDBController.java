@@ -28,7 +28,6 @@ public class MongoDBController {
             mongoClient = MongoClients.create(settings);
             database = mongoClient.getDatabase("Kerim-Baza");
 
-            // Test connection
             database.runCommand(new Document("ping", 1));
             System.out.println("Successfully connected to MongoDB!");
 
